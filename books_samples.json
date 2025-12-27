@@ -1,0 +1,23 @@
+{
+  "next_id": 4,
+  "books": [
+    {
+      "id": 1,
+      "title": "White Fang",
+      "author": "Jack London",
+      "year": 1906
+    },
+    {
+      "id": 2,
+      "title": "Treasure Island",
+      "author": "Robert Louis Stevenson",
+      "year": 1883
+    },
+    {
+      "id": 3,
+      "title": "Around the World in 80 Days",
+      "author": "Jules Verne",
+      "year": 1873
+    }
+  ]
+}
