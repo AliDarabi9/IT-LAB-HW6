@@ -1,0 +1,129 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #0b1220;
+  color: #e8eefc;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+header {
+  margin-bottom: 18px;
+}
+
+header h1 {
+  margin: 0 0 6px 0;
+}
+
+header p {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.card {
+  background: #121a2b;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 18px;
+  margin: 14px 0;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 180px;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: #0b1220;
+  color: #e8eefc;
+  outline: none;
+}
+
+input::placeholder { opacity: 0.6; }
+
+button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 0;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.secondary {
+  background: rgba(255,255,255,0.1);
+}
+
+button:hover { opacity: 0.92; }
+
+.hint {
+  margin: 10px 0 0 0;
+  min-height: 18px;
+  opacity: 0.9;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.tableWrap {
+  overflow: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  text-align: left;
+}
+
+th {
+  background: rgba(255,255,255,0.04);
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+td:last-child { text-align: right; }
+
+.smallBtn {
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-weight: 700;
+  background: rgba(239, 68, 68, 0.9);
+}
+
+footer {
+  opacity: 0.75;
+  margin-top: 18px;
+}
