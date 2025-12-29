@@ -10,17 +10,15 @@ DEFAULT_DB = {
 
 def load_db(db_path: str) -> dict:
     path = Path(db_path)
-    if not path.exists():
-        save_db(db_path, DEFAULT_DB)
+    if path.exists():
+        raw = path.read_text(encoding="utf-8")
+        data = json.loads(raw)
+        if all(key in data for key in ("next_id", "books")):
+            return data
         return DEFAULT_DB.copy()
 
-    with path.open("r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    if "next_id" not in data or "books" not in data:
-        return DEFAULT_DB.copy()
-
-    return data
+    save_db(db_path, DEFAULT_DB)
+    return DEFAULT_DB.copy()
 
 
 def save_db(db_path: str, data: dict) -> None:
